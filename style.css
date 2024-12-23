@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+ 
+:root{
+    --main-color: #d3ad7f; /* Gold-like color */
+
+    --hover-color: #b68e66; /* Darker shade for hover */
+    --background-color: #333; /* Dark navbar background */
+    --bg:#01013;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+*{
+   
+    font-family: "Roboto", sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+ }
+ html{
+   font-size: 62.5%;
+   scroll-padding-top: 9rem;
+   scroll-behavior: smooth;
+ }
+ html::-webkit-scrollbar{
+   width: .8rem;
+ }
+
+ html::-webkit-scrollbar-track{
+    background: transparent;
+ }
+
+ html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+ }
+ body {
+   background: black;
+    
+}
+.heading{
+   text-align: center;
+   color:#fff ;
+   text-transform: uppercase;
+   padding-bottom: 3.5rem;
+   font-size: 4rem;
+
+
+}
+
+.heading span{
+   color:var(--main-color);
+   text-transform: uppercase;
+}
+
+
+
+section{
+   padding: 2rem 7%;
+}
+
+.btn{
+   margin-top: 1rem;
+   display: inline-block;
+   padding: 7rem 3rem;
+   font-size: 1.7rem;
+   color: #333;
+   background: var(--main-color);
+   cursor: pointer;
+
+}
+.btn:hover{
+   letter-spacing: .2rem;
+}
+.header{
+   background-color: #0a0a0a;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1.5rem 7%;
+   border-bottom: var(--border);
+   position: fixed;
+   top: 0; left: 0;right: 0;
+   z-index: 1000;
+
+}
+.header .logo img {
+   height: 40px; /* Set the height of the logo */
+   max-height: 40px; /* Ensure the logo doesn't exceed this size */
+   width: auto; /* Maintain aspect ratio */
+   
+   margin-bottom: -5px; /* Move the logo slightly downward by reducing height from the bottom */
+}
+
+
+.header .navbar a{
+
+
+   margin: 0 1rem;
+   font-size: 1.6rem;
+   color: #fff;
+
+}
+.header .navbar a:hover{
+   
+   color: var(--main-color);
+   border-bottom: .1rem solid var(--main-color) ;
+   padding-bottom: .5rem;
+
+}
+
+.header .icons div{
+
+   color: #fff;
+   cursor: pointer;
+   font-size: 2.5rem;
+   margin-left: 2rem;
+
+
+}
+
+
+
+
+/* General header styling */
+.header {
+    display: flex;
+    /* Align logo and nav items horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 60px;
+    /* Set the height of the navigation bar */
+    padding: 0 20px;
+    /* Add padding around the header */
+    background-color: black;
+    /* Optional background color */
+    position: relative;
+    /* Allow precise positioning of child elements */
+}
+
+
+
+
+.header .icons div:hover{
+    color: var(--main-color);
+}
+ 
+      .header .search-form{
+         position: absolute;
+         top: 115%;
+         right: 7%;
+         background: #fff;
+         width: 50rem;
+         height:5rem ;
+         display: flex;
+         align-items: center;
+         transform: scaleY(0);
+         transform-origin: top ;
+      }
+      
+
+      .Home .content h3{
+          font-size: 4.5rem;
+         }
+         .Home .content p{
+            font-size: 4.5rem;
+           }
+
+
+      .header .search-form.active{
+         display: block;
+         background-color: #f9f9f9;
+         padding: 10px;
+         border-radius: 5px;
+         transform: scaleY(1);
+      }
+      .header .search-form input{
+         height: 50;
+         width: 50;
+         font-size: 1.6rem;
+         color:var(--black);
+         padding: 1rem;
+         text-transform: none;
+      }
+      .search-form button {
+         padding: 10px 20px;
+         background-color: #007bff;
+         color: white;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+     }
+       
+      .header .search-form label{
+         cursor: pointer;
+         font-size: 2.2rem;
+         margin-right: 1.5rem;
+         color: var(--background-color);
+      }
+       
+      .header .search-form label:hover{
+         color:var(--main-color);
+      }
+       
+
+
+
+
+ 
+      
+.header{
+   padding: 1.5rem 2rem;
+}
+section{
+   padding: 2rem;
+}
+      
+
+
+
+@media  (min-width: 991px) {
+
+   .icons{
+      display: none;
+   }
+}
+
+
+
+
+
+@media  (max-width: 991px) {
+   html{
+      font-size: 55%;
+   }  
+.icons{
+   display: block;
+}
+.header .navbar{
+   position:absolute;
+   top:100%;
+   right: 0;
+   background: #fff;
+   width:30rem;
+   height: calc(100vh -9.5rem);
+   display: none;
+
+}
+.header .navbar a{
+   color: #0a0a0a;
+  display: block; 
+  margin: 1.5rem;
+  padding: 1rem;
+  font-size: 2rem;
+
+}
+
+.header .search-form.active{
+   width: 90%;
+   right: 2rem;
+}
+
+
+.header .navbar.active{
+   right: 0;
+   display: block;
+}
+}
+
+#menu_btn{
+   display: inline-block;  
+  }
+
+  .Home{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   background:url('images/cafee\ culture\ \(12\).jpg')no-repeat;
+   background-size: cover;
+   background-position: center;
+
+}
+.Home .content{
+   max-width: 60rem;
+
+}
+
+  
+
+.Home .content h1{
+   font-size: 5rem;
+   text-transform: uppercase;
+   color: #b68e66;
+   
+}
+
+.Home .content p{
+   font-size: 1.2rem;
+   font-weight: lighter;
+   line-height: 1.8;
+   padding: 1rem 0;
+   color: #b68e66;
+
+} 
+.about .row{
+   display: flex;
+   align-items: center;
+   background:var(--black) ;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 30px;
+}
+
+.about .row>div{
+   flex-grow: 1;
+   flex-basis: 0;
+   min-width: 300px;
+}
+ 
+.about .row .images img{
+   width:100%;
+}
+.about .row .content h3{
+   font-size: 3rem;
+   color:#fff;
+   
+
+}
+.about .row .content p{
+   font-size: 1.6rem;
+   color: #ccc;;
+   padding: 2rem;
+   margin: 20px 0px 10px;
+   line-height: 1.8;
+    border: var(--border);
+
+   
+
+
+}
+ /* General Section Styling */
+ .about{
+   display: flex;
+
+   align-items: center; /* Align items to the top */
+   justify-content: flex-start; /* Ensure the layout aligns properly */
+   padding: 20px;
+   background-color: #0a0a0a; /* Light background for the section */
+   border-radius: 10px;
+   gap: 20px; /* Spacing between the image and text */
+   flex-direction: column;
+   position: relative;
+ }
+ 
+ /* Styling for Image Container */
+ .image-container img {
+   width: 100%; /* Adjust the image width */
+   max-width: 500px;
+   height: auto; /* Maintain aspect ratio */
+   display: block;
+   margin: 0 auto; /* Center the image within its container */
+   border-radius: 8px; /* Optional: Add rounded corners */
+ }
+ .about-us .heading {
+   font-size: 2.5rem; /* Larger heading size */
+   margin-bottom: 20px; /* Space below the heading */
+   text-align: right;
+   color: #1e90ff; /* Blue heading color */
+ }
+ 
+ /* Content Container Styling */
+ .about-us .content {
+   display: flex;
+   align-items: flex-start; /* Align image and text to the top */
+   justify-content: space-between; /* Spread items across the content */
+   width: 100%; /* Full width for the content area */
+   max-width: 1200px; /* Optional: Limit max width */
+   gap: 20px; /* Add spacing between image and text */
+   height: auto;
+ }
+ 
+ /* Text Container Styling */
+ .text-container {
+   background-color:#04081b; /* Blue background */
+   color: #ffffff; /* White text */
+   padding: 15px;
+   border-radius: 8px; /* Rounded corners */
+   width: 100%; /* Take up the remaining space */
+   flex: 1;
+   text-align:right;
+ }
+ 
+ .text-container h3 {
+   margin-top: 0; /* Remove default margin from heading */
+   font-size: 1.5rem;
+ }
+ 
+ .text-container p {
+   margin: 10px 0 0 0; /* Add spacing between heading and paragraph */
+   font-size: 1rem;
+   line-height: 1.6;
+ }
+
+
+
+ 
+ 
+
+ /* General Reset */
+  
+ 
+  
+  
+ 
+   
+  
+ 
+  
+ 
+ /* Product Section */
+  
+ 
+  
+ 
+  
+ 
+ 
+
+
+
+
+
+
+
+
+  
+  
+  
+ 
+ 
+  
+ 
+ 
+ 
+  /* General Styling */
+ 
+
+ 
+
+
+
+  

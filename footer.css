@@ -1,0 +1,61 @@
+/* Footer Styling */
+.footer {
+    background-color: #ffffff; /* Dark background color */
+    color: #f9f9f9; /* Light text color */
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Makes it responsive */
+    justify-content: space-around;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 300px; /* Ensures each section adapts to screen size */
+    margin: 0.5rem 0;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #000; /* Neon blue color for section titles */
+}
+
+.footer-section p, 
+.footer-section a {
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a:hover {
+    color: #000; /* Neon blue on hover */
+}
+
+.footer-section ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    border-top: 1px solid #000; /* Adds a border line above bottom footer */
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

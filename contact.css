@@ -1,0 +1,86 @@
+ /*contact information*/
+.contact .row{
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 20px;
+ 
+ }
+ .contact .row .map{
+    flex: 1 1 45rem;
+    width: 500px;
+    object-fit: cover;
+    display: flex;
+ 
+ 
+ }
+ 
+ 
+ .contact .row form{
+    flex:1 1 45rem;
+    padding:5rem 2rem;
+    text-align: center;
+
+    
+    
+ 
+ }
+ 
+ .contact .row form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #fff;
+    
+ 
+ }
+ 
+ .contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+    background:var(--black);
+    border: var(--border);
+    padding-left: 14px;
+ 
+ 
+ }
+ .contact .row form .inputBox span{
+    color: #fff;
+    font-size: 2rem;
+    padding-top: 50px;
+    text-align: center;
+    margin-top: -40px;
+      /* Ensures proper alignment with input */
+    align-items: center; 
+    display: inline-flex;
+    margin-bottom: 0%;
+
+ }
+ .contact .heading{
+    text-align: center; /* Center the title horizontally */
+    margin-top: 500px; /* Adjust spacing above the title */
+    text-align: center; /* Center the title horizontally */
+     /* Adjust spacing above the title */
+    margin-bottom: 0px; /* Adjust spacing below the title */
+    font-size: 2.5rem; /* Optional: Adjust font size */
+    color: var(--gold); /* Ensure it matches your theme *//* Adjust spacing below the title */
+    font-size: 2.5rem; /* Optional: Adjust font size */
+    color: var(--gold); /* Ensure it matches your theme */
+ }
+ 
+ .contact .row form .inputBox input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color:#fff;
+    text-transform: none;
+    background: none;
+    
+ 
+ 
+ }
+ 
+ 
