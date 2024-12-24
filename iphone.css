@@ -93,8 +93,10 @@ body{
   
   .box-container .old-price {
     text-decoration: line-through;
-    color:#333;
+    color:#fff;
   }
+
+ 
   
   /* Color Options */
   
