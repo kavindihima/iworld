@@ -149,15 +149,7 @@ section{
     color: var(--main-color);
 }
  
-.search-bar {
-   display: flex;
-   align-items: center;
-   margin-left: auto;
-}
-.search-bar form {
-   display: flex;
-   align-items: center;
-}
+
       
 
       .Home .content h3{
@@ -168,29 +160,7 @@ section{
            }
 
 
-           .search-bar input[type="text"] {
-            padding: 5px 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 3px 0 0 3px;
-            outline: none;
-            width: 200px;
-        }
         
-        .search-bar button {
-            padding: 5px 10px;
-            font-size: 16px;
-            background-color: #ccc;
-            border: none;
-            border-radius: 0 3px 3px 0;
-            cursor: pointer;
-            color: #333;
-            outline: none;
-        }
-        
-        .search-bar button:hover {
-            background-color: #e6b800;
-        }
         
         
 
