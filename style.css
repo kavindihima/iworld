@@ -192,17 +192,7 @@ section{
             background-color: #e6b800;
         }
         
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .search-bar {
-                width: 100%;
-                margin-top: 10px;
-            }
         
-            .search-bar input[type="text"] {
-                width: 100%;
-            }
-        }
 
 
 
