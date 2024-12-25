@@ -149,18 +149,15 @@ section{
     color: var(--main-color);
 }
  
-      .header .search-form{
-         position: absolute;
-         top: 115%;
-         right: 7%;
-         background: #fff;
-         width: 50rem;
-         height:5rem ;
-         display: flex;
-         align-items: center;
-         transform: scaleY(0);
-         transform-origin: top ;
-      }
+.search-bar {
+   display: flex;
+   align-items: center;
+   margin-left: auto;
+}
+.search-bar form {
+   display: flex;
+   align-items: center;
+}
       
 
       .Home .content h3{
@@ -171,64 +168,41 @@ section{
            }
 
 
-      .header .search-form.active{
-         display: block;
-         background-color: #f9f9f9;
-         padding: 10px;
-         border-radius: 5px;
-         transform: scaleY(1);
-      }
-      .header .search-form input{
-         height: 50;
-         width: 50;
-         font-size: 1.6rem;
-         color:var(--black);
-         padding: 1rem;
-         text-transform: none;
-      }
-      .search-form button {
-         padding: 10px 20px;
-         background-color: #007bff;
-         color: white;
-         border: none;
-         border-radius: 5px;
-         cursor: pointer;
-     }
-       
-      .header .search-form label{
-         cursor: pointer;
-         font-size: 2.2rem;
-         margin-right: 1.5rem;
-         color: var(--background-color);
-      }
-       
-      .header .search-form label:hover{
-         color:var(--main-color);
-      }
-       
-
-
-
-
- 
-      
-.header{
-   padding: 1.5rem 2rem;
-}
-section{
-   padding: 2rem;
-}
-      
-
-
-
-@media  (min-width: 991px) {
-
-   .icons{
-      display: none;
-   }
-}
-
+           .search-bar input[type="text"] {
+            padding: 5px 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 3px 0 0 3px;
+            outline: none;
+            width: 200px;
+        }
+        
+        .search-bar button {
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: #ccc;
+            border: none;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+            color: #333;
+            outline: none;
+        }
+        
+        .search-bar button:hover {
+            background-color: #e6b800;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .search-bar {
+                width: 100%;
+                margin-top: 10px;
+            }
+        
+            .search-bar input[type="text"] {
+                width: 100%;
+            }
+        }
 
 
 
