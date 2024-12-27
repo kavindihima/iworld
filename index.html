@@ -155,16 +155,16 @@
         <div class="productsss-grid">
             <!-- Sample Product Cards -->
             <div class="productsss-card">
-                <img src="images/Openjourney (1320965619092422661).png" alt="Product 1">
+                <img id="product-image" src="images/Openjourney (1320965619092422661).png" alt="Product 1">
                 <h3>IPHONE 16 pro max</h3>
                 <p>LKR 389,900.00-LKR 684,900.00 <span class="old-price"> </span></p>
                 <div class="color-options">
                     <label>Available Colors:</label>
                     <div class="color-range">
-                        <span class="color-dot" style="background-color: #252525;"></span> <!-- Red -->
-                        <span class="color-dot" style="background-color: #D2B48C;"></span> <!-- Green -->
-                        <span class="color-dot" style="background-color: #C0C0C0;"></span> <!-- Blue -->
-                        <span class="color-dot" style="background-color: #F5F5F5;"></span> <!-- Gold -->
+                        <span class="color-dot" style="background-color: #252525;" data-color="black"></span>
+                        <span class="color-dot" style="background-color: #D2B48C;" data-color="gold"></span> <!-- Green -->
+                        <span class="color-dot" style="background-color: #C0C0C0;" data-color="silver"></span> <!-- Blue -->
+                        <span class="color-dot" style="background-color: #F5F5F5;" data-color="white"></span> <!-- Gold -->
                     </div>
                 </div>
                 <p class="kk">Storage:256GB,512GB,1TB</p>
@@ -173,6 +173,30 @@
                 
                
             </div>
+            <script>
+                // Add event listener to all color dots
+                document.querySelectorAll('.color-dot').forEach(dot => {
+                    dot.addEventListener('click', function() {
+                        // Get the color from the data attribute
+                        const color = this.getAttribute('data-color');
+                        
+                        // Select the product image
+                        const productImage = document.getElementById('product-image');
+            
+                        // Change the image source based on the color
+                        productImage.src =`images/16pm-${color}.jpeg`;
+                         
+            
+                        // Optional: Add a class to highlight the selected color
+                        document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
+                        this.classList.add('selected');
+                    });
+                });
+            </script>
+            
+
+
+
             <div class="productsss-card">
                 <img src="images/Openjourney (1320965619092422661).png" alt="Product 2">
                 <h3>IPHONE 16 Pro</h3>
