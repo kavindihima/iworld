@@ -150,83 +150,84 @@
     <link rel="stylesheet" href="iphone.css">
 
     <section class="iphone" id="iphone">
-        <h1 class="sections-title">Iphones  <span>Collection</span></h1>
-
+        <h1 class="sections-title">Iphones <span>Collection</span></h1>
+    
         <div class="productsss-grid">
-            <!-- Sample Product Cards -->
+            <!-- First Product -->
             <div class="productsss-card">
-                <img id="product-image" src="images/Openjourney (1320965619092422661).png" alt="Product 1">
-                <h3>IPHONE 16 pro max</h3>
-                <p>LKR 389,900.00-LKR 684,900.00 <span class="old-price"> </span></p>
+                <img id="product-image-1" src="images/Openjourney (1320965619092422661).png" alt="Product 1">
+                <h3>IPHONE 16 Pro Max</h3>
+                <p>LKR 389,900.00-LKR 684,900.00 <span class="old-price"></span></p>
                 <div class="color-options">
                     <label>Available Colors:</label>
                     <div class="color-range">
-                        <span class="color-dot" style="background-color: #252525;" data-color="black"></span>
-                        <span class="color-dot" style="background-color: #D2B48C;" data-color="gold"></span> <!-- Green -->
-                        <span class="color-dot" style="background-color: #C0C0C0;" data-color="silver"></span> <!-- Blue -->
-                        <span class="color-dot" style="background-color: #F5F5F5;" data-color="white"></span> <!-- Gold -->
+                        <span class="color-dot" style="background-color: #252525;" data-color="black" data-target="product-image-1"></span>
+                        <span class="color-dot" style="background-color: #D2B48C;" data-color="gold" data-target="product-image-1"></span>
+                        <span class="color-dot" style="background-color: #C0C0C0;" data-color="silver" data-target="product-image-1"></span>
+                        <span class="color-dot" style="background-color: #F5F5F5;" data-color="white" data-target="product-image-1"></span>
                     </div>
                 </div>
-                <p class="kk">Storage:256GB,512GB,1TB</p>
+                <p class="kk">Storage: 256GB, 512GB, 1TB</p>
                 <p>Titanium design with larger 6.9-inch Super Retina XDR display</p>
-                 
-                
-               
             </div>
-            <script>
-                // Add event listener to all color dots
-                document.querySelectorAll('.color-dot').forEach(dot => {
-                    dot.addEventListener('click', function() {
-                        // Get the color from the data attribute
-                        const color = this.getAttribute('data-color');
-                        
-                        // Select the product image
-                        const productImage = document.getElementById('product-image');
-            
-                        // Change the image source based on the color
-                        productImage.src =`images/iphone-${color}.jpg`;
-                         
-            
-                        // Optional: Add a class to highlight the selected color
-                        document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
-                        this.classList.add('selected');
-                    });
-                });
-            </script>
-            
-
-
-
+    
+            <!-- Second Product -->
             <div class="productsss-card">
-                <img src="images/Openjourney (1320965619092422661).png" alt="Product 2">
+                <img id="product-image-2" src="images/iphone-black.jpg" alt="Product 2">
                 <h3>IPHONE 16 Pro</h3>
-                <p>LKR 339,900.00-LKR-649,900.00<span class="old-price"></span></p>
+                <p>LKR 339,900.00-LKR-649,900.00 <span class="old-price"></span></p>
                 <div class="color-options">
                     <label>Available Colors:</label>
                     <div class="color-range">
-                        <span class="color-dot" style="background-color: #252525;"></span> <!-- Red -->
-                        <span class="color-dot" style="background-color: #D2B48C;"></span> <!-- Green -->
-                        <span class="color-dot" style="background-color: #C0C0C0;"></span> <!-- Blue -->
-                        <span class="color-dot" style="background-color: #F5F5F5;"></span>
+                        <span class="color-dot" style="background-color: #252525;" data-color="black" data-target="product-image-2"></span>
+                        <span class="color-dot" style="background-color: #D2B48C;" data-color="gold" data-target="product-image-2"></span>
+                        <span class="color-dot" style="background-color: #C0C0C0;" data-color="silver" data-target="product-image-2"></span>
+                        <span class="color-dot" style="background-color: #F5F5F5;" data-color="white" data-target="product-image-2"></span>
                     </div>
                 </div>
-                <p>Storage:128GB,256GB,512GB,1TB</p>
+                <p>Storage: 128GB, 256GB, 512GB, 1TB</p>
                 <p>Titanium design with larger 6.3-inch Super Retina XDR display</p>
-                 
-
             </div>
+        
+    
+    
+    <script>
+        // Add event listener to all color dots
+        document.querySelectorAll('.color-dot').forEach(dot => {
+            dot.addEventListener('click', function () {
+                // Get the color and target image ID from the data attributes
+                const color = this.getAttribute('data-color');
+                const targetImageId = this.getAttribute('data-target');
+    
+                // Select the target product image
+                const productImage = document.getElementById(targetImageId);
+    
+                // Change the image source based on the color
+                productImage.src = `images/iphone-${color}.jpg`;
+    
+                // Highlight the selected color dot
+                const parentRange = this.parentElement; // Get the parent color-range div
+                parentRange.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+    </script>
+    
+
+
+
             <div class="productsss-card">
-                <img src="images/Openjourney (1320965649878483033).png" alt="Product 3">
+                <img id="product-image-3" src="images/Openjourney (1320965649878483033).png" alt="Product 3">
                 <h3>IPHONE 16 plus</h3>
                 <p>LKR 284,900.00-LKR 504,900.00 <span class="old-price"></span></p>
                 <div class="color-options">
                     <label>Available Colors:</label>
                     <div class="color-range">
-                        <span class="color-dot" style="background-color: #000000"></span> <!-- Red -->
-                        <span class="color-dot" style="background-color: #FFC0CB;"></span> <!-- Green -->
-                        <span class="color-dot" style="background-color: #25b495;"></span> <!-- Blue -->
-                        <span class="color-dot" style="background-color: #FFFFFF;"></span> <!-- Gold -->
-                        <span class="color-dot" style="background-color: #100b38;"></span> <!-- Gold -->
+                        <span class="color-dot" style="background-color: #000000;"data-color="black" data-target="product-image-3"></span> <!-- Red -->
+                        <span class="color-dot" style="background-color: #FFC0CB;"data-color="pink" data-target="product-image-3"></span> <!-- Green -->
+                        <span class="color-dot" style="background-color: #25b495;"data-color="green" data-target="product-image-3"></span> <!-- Blue -->
+                        <span class="color-dot" style="background-color: #FFFFFF;"data-color="white" data-target="product-image-3"></span> <!-- Gold -->
+                        <span class="color-dot" style="background-color: #100b38;"data-color="blue" data-target="product-image-3"></span> <!-- Gold -->
                     </div>
                 </div>
                 <p>Storage:128GB,256GB,512GB</p>
@@ -235,25 +236,49 @@
 
             </div>
             <div class="productsss-card">
-                <img src="images/Openjourney (1320965649878483033).png" alt="Product 4">
+                <img id="product-image-4" src="images/Openjourney (1320965649878483033).png" alt="Product 4">
                 <h3>IPHONE 16</h3>
                 <p>LKR 249,900.00-LKR 464,900.00<span class="old-price"></span></p>
                 <div class="color-options">
                     <label>Available Colors:</label>
                     <div class="color-range">
-                        <span class="color-dot" style="background-color: #000000"></span> <!-- Red -->
-                        <span class="color-dot" style="background-color: #FFC0CB;"></span> <!-- Green -->
-                        <span class="color-dot" style="background-color: #25b495;"></span> <!-- Blue -->
-                        <span class="color-dot" style="background-color: #FFFFFF;"></span> <!-- Gold -->
-                        <span class="color-dot" style="background-color: #100b38;"></span> <!-- Gold -->
+                        <span class="color-dot" style="background-color: #000000;"data-color="black" data-target="product-image-4"></span> <!-- Red -->
+                        <span class="color-dot" style="background-color: #FFC0CB;"data-color="pink" data-target="product-image-4"></span> <!-- Green -->
+                        <span class="color-dot" style="background-color: #25b495;"data-color="green" data-target="product-image-4"></span> <!-- Blue -->
+                        <span class="color-dot" style="background-color: #FFFFFF;"data-color="white" data-target="product-image-4"></span> <!-- Gold -->
+                        <span class="color-dot" style="background-color: #100b38;"data-color="blue" data-target="product-image-4"></span> <!-- Gold -->
                     </div>
-                </div>
+                    </div>
+                
                 <p>Storage:128GB,256GB,512GB</p>
                 <P>6.1-inch aerospace-grade aluminum design footnote 1 with durable latest-generation</P>
                  
                 
 
             </div>
+
+            <script>
+                // Add event listener to all color dots
+                document.querySelectorAll('.color-dot').forEach(dot => {
+                    dot.addEventListener('click', function () {
+                        // Get the color and target image ID from the data attributes
+                        const color = this.getAttribute('data-color');
+                        const targetImageId = this.getAttribute('data-target');
+            
+                        // Select the target product image
+                        const productImage = document.getElementById(targetImageId);
+            
+                        // Change the image source based on the color
+                        productImage.src = `images/16pl-${color}.jpg`;
+            
+                        // Highlight the selected color dot
+                        const parentRange = this.parentElement; // Get the parent color-range div
+                        parentRange.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
+                        this.classList.add('selected');
+                    });
+                });
+            </script>
+
             <div class="productsss-card">
                 <img src="images/Openjourney (1320965740525785098).png" alt="Product 5">
                 <h3>IPHONE 15 Pro Max</h3>
