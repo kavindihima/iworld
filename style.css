@@ -100,7 +100,7 @@ section {
 .header .navbar a {
     margin: 0 1rem;
     font-size: 1.6rem;
-    color: #fff;
+    color: #e4e4e4;
 }
 
 .header .navbar a:hover {
@@ -116,8 +116,8 @@ section {
 }
 
 .header .dropdown button {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     padding: 14px 20px;
     border: none;
     cursor: pointer;
@@ -127,13 +127,13 @@ section {
 .header .dropdown-content {
     display:none;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #000000;
     min-width: 160px;
     z-index: 1;
 }
 
 .header .dropdown-content a {
-    color: white;
+    color: rgb(247, 247, 247);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -146,6 +146,15 @@ section {
 
 .header .dropdown:hover .dropdown-content {
     display: block;
+}
+.header .dropdown .dropdown-arrow {
+   margin-left: 8px;  /* Add space between the text and the arrow */
+   font-size: 0.8rem;  /* Adjust the size of the dropdown arrow */
+   transition: transform 0.3s ease-in-out;  /* Smooth transition for the arrow */
+}
+
+.header .dropdown:hover.dropdown-arrow {
+   transform: rotate(180deg); /* Rotates the arrow when hovering over the dropdown */
 }
 
 .header .icons div {
@@ -182,14 +191,14 @@ section {
         position: absolute;
         top: 100%;
         right: 0;
-        background: #fff;
+        background: #000000;
         width: 30rem;
         height: calc(100vh - 9.5rem);
         display: none;
     }
 
     .header .navbar a {
-        color: #0a0a0a;
+        color: #ffffff;
         display: block;
         margin: 1.5rem;
         padding: 1rem;
