@@ -34,121 +34,65 @@ body{
     font-size: 1rem;
   }
   
-  /* Section Title */
-   
-  .sections-title {
-    text-align:center;
-    font-size: 3.9rem;
-    margin: 20px 0;
-  }
-  
-  .sections-title span {
-    color: #b68e66; }
-    /* Apple Blue */
-    
+  /* Section title */
+.sectionsss-title {
+  text-align: center;
+  font-size: 3rem;
+  margin: 20px 0;
+}
 
-  
-  /* Products Grid */
-  
-  .box-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    background-color: #000000;
-    padding: 50px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
- 
-  .box-container .box{
-    flex-grow: 1;
-    flex-basis: 0;
-    text-align: center;
-    border: var(--border);
-    padding: 2rem;
-    min-width: 500px;
-  }
- 
-  .box-container .box .icons a{
-     height: 5rem;
-     width: 5rem;
-     line-height: 5rem;
- 
-  }
-   
-  
-  
-  .box-container .box h3 {
-    margin: 15px 0;
-    font-size: 1.5rem;
-  }
-  
-  .box-container.box p {
-    font-size: 1.2rem;
-    color:#ffffff;
-  }
-  
-  .box-container .old-price {
-    text-decoration: line-through;
-    color:#fff;
-  }
-  
-  /* Color Options */
-  
-  .color-options {
-    margin: 10px 0;
-  }
-  
-  .color-options label {
-    font-size: 0.9rem;
-    color: #666;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .color-range {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .color-dot {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 1px solid #ddd;
-    display: inline-block;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .color-dot:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
+.sectionsss-title span {
+  color: #b68e66;
+}
 
+/* Carousel container styles */
+.carousel-container {
+  position: relative;
+  width: 500%;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden; /* Hide images that are out of view */
+}
 
-  
-  /* Add To Cart Button */
-  
-  .btn {
-    background-color: #b68e66; /* Apple Blue */
-    
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #b5b200;
-  }
-  
+/* Carousel images container */
+.carousel .images-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+}
 
-   
-    
+/* Carousel image styles */
+.carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Arrows styling */
+.prev-arrow, .next-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.prev-arrow {
+  left: 10px;
+}
+
+.next-arrow {
+  right: 10px;
+}
+
+/* Make the carousel responsive */
+@media (max-width: 768px) {
+  .carousel-container {
+      width: 50%;
+  }
+}

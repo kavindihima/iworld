@@ -20,12 +20,31 @@
  
 console.log(navbar);       // Should log the .navbar element
 console.log(searchfrom);   // Should log the .search-from element
+document.addEventListener("DOMContentLoaded", function() {
+  const prevArrow = document.querySelector('.prev-arrow');
+  const nextArrow = document.querySelector('.next-arrow');
+  const imagesContainer = document.querySelector('.images-container');
+  const images = document.querySelectorAll('.carousel-image');
+  let index = 0;
 
- // Simulate dynamic page switching
-const pageDropdown = document.getElementById("page-dropdown");
+  // Show the image at the current index
+  function showImage() {
+      const totalImages = images.length;
+      imagesContainer.style.transform = `translateX(-${index * 100}%)`; // Slide the images
+  }
 
-pageDropdown.addEventListener("change", function () {
-  const selectedPage = pageDropdown.value;
-  alert(`You selected Page ${selectedPage}`);
-  // Add logic to load new products dynamically based on the selected page
+  // Go to the previous image
+  prevArrow.addEventListener('click', () => {
+      index = (index === 0) ? images.length - 1 : index - 1;
+      showImage();
+  });
+
+  // Go to the next image
+  nextArrow.addEventListener('click', () => {
+      index = (index === images.length - 1) ? 0 : index + 1;
+      showImage();
+  });
+
+  // Initialize the first image
+  showImage();
 });
