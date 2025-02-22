@@ -155,5 +155,32 @@ body{
     color: #ddd;
   }
 
+ /* Style for the Hot Selling label */
+.hot-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+/* Ensure product cards have a relative position so the label is placed correctly */
+.productsss-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #999;
+  
+   
+}
+
+ 
    
     
