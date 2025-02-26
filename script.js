@@ -48,3 +48,42 @@ document.addEventListener("DOMContentLoaded", function() {
   // Initialize the first image
   showImage();
 });
+
+const imagesContainer = document.querySelector(".images-container");
+const prevArrow = document.querySelector(".prev-arrow");
+const nextArrow = document.querySelector(".next-arrow");
+
+let index = 0;
+
+function updateCarousel() {
+    const imageWidth = document.querySelector(".carousel-image").clientWidth;
+    imagesContainer.style.transform = `translateX(${-index * imageWidth}px)`;
+}
+
+nextArrow.addEventListener("click", () => {
+    if (index < 3) { // Total images - 1
+        index++;
+    } else {
+        index = 0;
+    }
+    updateCarousel();
+});
+
+prevArrow.addEventListener("click", () => {
+    if (index > 0) {
+        index--;
+    } else {
+        index = 3; // Last image index
+    }
+    updateCarousel();
+});
+
+// Auto-slide every 4 seconds
+setInterval(() => {
+    if (index < 3) {
+        index++;
+    } else {
+        index = 0;
+    }
+    updateCarousel();
+}, 4000);

@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <!-- customer css file link-->
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <!-- For Products Page -->
+     
 
 
     <!-- For Products Page -->
@@ -21,7 +20,7 @@
 
     <link rel="stylesheet" href="preownediphones.css">
 
-
+    
 
     <!-- For Products Page -->
     <link rel="stylesheet" href="Airpods.css">
@@ -1389,25 +1388,65 @@
     </section>
 
     <!--our serives section-->
+     
+
+
+<script src="script.js"></script>
+</section>
+
+ 
     <section class="services" id="services">
-        <h1 class="sectionsss-title">Our<span> Services</span></h1>
-        
-        <div class="carousel-container">
-            <div class="carousel">
-                <button class="prev-arrow">&#10094;</button> <!-- Previous Arrow -->
-                
-                <div class="images-container">
-                    <img class="carousel-image" src="images/service1.jpg" alt="Service 1">
-                    <img class="carousel-image" src="images/service2.jpg" alt="Service 2">
-                    <img class="carousel-image" src="images/service3.jpg" alt="Service 3">
-                    <img class="carousel-image" src="images/service4.jpg" alt="Service 4">
-                </div>
-                
-                <button class="next-arrow">&#10095;</button> <!-- Next Arrow -->
+        <h1 class="sections-title">Our <span>Services</span></h1>
+        <div class="services-list">
+            <div class="service">
+                <h2>Iphone Repair</h2>
+                <img src="images/White And Blue Simple Phone Repair Service Facebook Post (1).png" alt="Iphone Repair">
+                 
+                <button class="btn" onclick="goToIphoneRepair()">more info</button>
+            </div>
+            <div class="service">
+                <h2>Iwatch Repairs</h2>
+                <img src="images/Blue and White Modern Phone Repair Service Flyer (2).png" alt="Iphone Repair">
+                 
+                <button class="btn" onclick="goTophoneRepair()">more info</button>
+            </div>
+            <div class="service">
+                <h2>Ipad Repair</h2>
+                <img src="images/Blue and White Modern Phone Repair Service Flyer (4).png" alt="Iphone Repair">
+                <button class="btn" onclick="goToWatchRepair()">more info</button>
+            </div>
+
+            <div class="service">
+                <h2>Phone Repairs</h2>
+                <img src="images/White And Blue Simple Phone Repair Service Facebook Post.png" alt="Iphone Repair">
+               
+                <button class="btn" onclick="goToOtherRepair()">more info</button>
             </div>
         </div>
     </section>
-    
+    <script>
+        function goToIphoneRepair() {
+            window.location.href = "iprepair.html";
+        }
+    </script>
+
+<script>
+    function goTophoneRepair() {
+        window.location.href = "prepair.html";
+    }
+</script>
+
+<script>
+    function goToWatchRepair() {
+        window.location.href = "iwrepair.html";
+    }
+</script>
+
+<script>
+    function goToOtherRepair() {
+        window.location.href = "otrepair.html";
+    }
+</script>
 
     <section class="contact" id="contact">
         <h1 class="sections-title"><span>Contact</span> Us</h1>
@@ -1528,7 +1567,7 @@
 </script>
 -->
 
-
+<script src="script.js"></script>
 
 </body>
 
