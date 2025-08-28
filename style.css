@@ -378,6 +378,61 @@ section {
         border-radius: 10px;
     }
 }
+/* ===== Video Container 2 Styling ===== */
+.video-container2 {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;    /* adjust for desktop size */
+  margin: 30px auto;    /* center on page */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+  background: #000;
+}
+
+/* Maintain 16:9 ratio */
+.video-container2::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;   /* 16:9 aspect ratio */
+}
+
+/* Video fills the container */
+.video-container2 video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* cover = nice crop effect */
+  border: none;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .video-container2 {
+    border-radius: 12px;
+    margin: 20px auto;
+  }
+}
+/* CSS */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #4a00e0; /* gradient purple */
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #4a00e0, #8e2de2);
+  transform: scale(1.05);
+}
 
 .about {
     display: flex;
