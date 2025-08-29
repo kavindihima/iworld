@@ -15,7 +15,97 @@
 
 <section class="iwatch-section">
     <!-- Topic Title -->
-    
+    <style>
+    body {
+      margin: 0;
+      background: #000;
+      font-family: Arial, sans-serif;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .product-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 20px;
+      border: 5px solid black;
+      min-height: 100vh;
+    }
+
+    .product-card {
+      background: #000;
+      border: 2px solid black;
+      padding: 15px;
+      border-radius: 10px;
+      position: relative;
+      text-align: center;
+    }
+
+    .hot-label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: red;
+      color: white;
+      font-size: 14px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .product-card img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .product-card h3 {
+      margin: 10px 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .product-card p {
+      font-size: 14px;
+    }
+
+    /* Desktop grid */
+    @media (min-width: 768px) {
+      .product-section {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Popup */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup img {
+      max-width: 90%;
+      max-height: 80%;
+      border: 3px solid #fff;
+      border-radius: 10px;
+    }
+
+    .popup span {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
  
 <div class="productsss-card">
     <img id="product-image-5" src="images/Openjourney (1320965740525785098).png" alt="Product 5">
