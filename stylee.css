@@ -1,69 +1,5 @@
 /* ===== MAIN CONTAINER ===== */
 /* ===== MAIN CONTAINER ===== */
-.iwatch-section {
-  padding: 40px 20px;
-  max-width: 1200px; 
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* More compact */
-  gap: 20px;
-  background: #000; 
-  border: 0; /* No border lines visible */
-  font-family: "Poppins", sans-serif;
-}
-
-/* ===== PRODUCT CARD ===== */
-.productsss-card {
-  background: #000; /* Pure black background */
-  border-radius: 12px;
-  border: 1px solid #000; /* Black on black (invisible) */
-  padding: 15px 10px;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-  position: relative;
-  transition: all 0.3s ease;
-  width: 100%;
-}
-
-.productsss-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.25);
-}
-
-/* ===== IMAGE ===== */
-.productsss-card img {
-  max-width: 85%; /* Smaller image */
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #000; /* Invisible border */
-  transition: transform 0.3s ease, border 0.3s ease;
-}
-
-.productsss-card img:hover {
-  transform: scale(1.05);
-  border: 1px solid #e60000;
-}
-
-/* ===== TITLE ===== */
-.productsss-card h3 {
-  font-size: 16px;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 0.5px;
-}
-
-/* ===== DESCRIPTION ===== */
-.productsss-card p {
-  font-size: 12px;
-  color: rgba(200, 200, 200, 0.6);
-  margin-bottom: 10px;
-  line-height: 1.4;
-}
-
-/* ===== HOT SELLING LABEL ===== */
 /* ===== WHOLE PAGE ===== */
 body {
   margin: 0;
@@ -83,7 +19,6 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   background: #000;
-  border: 0;
 }
 
 /* ===== PRODUCT CARD ===== */
@@ -94,7 +29,7 @@ body {
   padding: 15px;
   text-align: center;
   color: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
   position: relative;
   transition: all 0.3s ease;
 }
@@ -108,7 +43,7 @@ body {
 .productsss-card img {
   max-width: 80%;
   border-radius: 8px;
-  border: 1px solid #eee9e9;
+  border: 1px solid #000;
   margin-bottom: 10px;
   transition: transform 0.3s ease, border 0.3s ease;
 }
@@ -170,7 +105,7 @@ body {
   height: 16px;
   border-radius: 50%;
   cursor: pointer;
-  border: 1px solid #ffffff;
+  border: 1px solid #000;
   transition: transform 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -190,7 +125,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #111;
   border-radius: 10px;
-  border: 1px solid #000000;
+  border: 1px solid #000;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #e60000;
@@ -211,6 +146,22 @@ body {
 
 @media (max-width: 600px) {
   .iwatch-section {
-    grid-template-columns: repeat(1, 1fr); /* ONE per row on mobile */
+    grid-template-columns: 1fr; /* Only 1 per row */
+  }
+
+  .productsss-card {
+    padding: 25px; /* Bigger cards on mobile */
+  }
+
+  .productsss-card img {
+    max-width: 95%; /* Larger images on mobile */
+  }
+
+  .productsss-card h3 {
+    font-size: 18px; /* Bigger text */
+  }
+
+  .productsss-card p {
+    font-size: 14px;
   }
 }
