@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preowned iPhones</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    :root{
+      --text:#c4baba;
+      --bg:#000;
+      --card:#0a0a0a;
+      --muted:#b6b1b1;
+      --accent:#c48f2f; /* title accent */
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "SF Pro Display","Helvetica Neue",Arial,sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* Section Title */
+    .sections-title {
+      font-size: 2.2rem;
+      text-align: center;
+      margin: 40px 0 20px;
+      font-weight: 600;
+      letter-spacing: .3px;
+    }
+    .sections-title span { color: var(--accent); }
+
+    /* Swiper Container */
+    .swiper {
+      width: 90%;
+      max-width: 1400px;
+      margin: auto;
+      padding: 20px 0 50px;
+    }
+    .swiper-wrapper { align-items: stretch; }
+    .swiper-slide {
+      height: auto;                 /* let cards size naturally */
+      display: flex;                /* make card fill slide */
+    }
+
+    /* Product Cards */
+    .productsss-card {
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      padding: 18px;
+      text-align: center;
+      transition: transform .3s ease, box-shadow .3s ease;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .productsss-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 35px rgba(0,0,0,0.4);
+    }
+
+    .productsss-card .media {
+      width: 100%;
+      aspect-ratio: 1/1;            /* consistent layout */
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 12px;
+      background: #111;
+      display: grid;
+      place-items: center;
+    }
+    .productsss-card img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .productsss-card h3 {
+      font-size: 1.1rem;
+      margin: 8px 0 6px;
+      letter-spacing: .4px;
+    }
+    .productsss-card p {
+      font-size: .95rem;
+      color: var(--muted);
+      margin: 4px 0;
+    }
+
+    /* Hot label */
+    .hot-label {
+      position: absolute;
+      top: 10px; left: 10px;
+      font-size: .75rem;
+      padding: 4px 8px;
+      background: #e11d48;
+      color: #fff;
+      border-radius: 999px;
+      letter-spacing: .3px;
+    }
+
+    /* Color Options */
+    .color-options { margin: 8px 0 6px; }
+    .color-options label {
+      display: block;
+      font-size: .9rem;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .color-range {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .color-dot {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      border: 1px solid #888;
+      cursor: pointer;
+      outline: none;
+    }
+    .color-dot:focus { box-shadow: 0 0 0 3px rgba(255,255,255,0.25); }
+
+    /* Swiper Arrows */
+    .swiper-button-next, .swiper-button-prev {
+      color: #cfcfcf;
+      font-weight: bold;
+      transition: transform .2s;
+    }
+    .swiper-button-next:hover, .swiper-button-prev:hover { transform: scale(1.15); }
+
+    /* Swiper Dots (high contrast on black) */
+    .swiper-pagination-bullet { background: #888; opacity: 1; }
+    .swiper-pagination-bullet-active { background: #fff; }
+
+    /* Responsive tweaks */
+    @media (max-width: 992px) {
+      .sections-title { font-size: 1.8rem; }
+    }
+    @media (max-width: 768px) {
+      .sections-title { font-size: 1.6rem; }
+      .productsss-card h3 { font-size: 1rem; }
+      .productsss-card p { font-size: .88rem; }
+    }
+    @media (max-width: 576px) {
+      .sections-title { font-size: 1.35rem; }
+      .productsss-card { padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Preowned iPhones Section ===== -->
+  <section class="Preowned" id="Preowned" aria-label="Preowned iPhones">
+    <h1 class="sections-title">Preowned <span>Iphones</span></h1>
+
+    <!-- Slider -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Product 1 -->
+        <div class="swiper-slide">
+          <article class="productsss-card">
+            <div class="media">
+              <img src="images/Untitled design (4).png" alt="iPhone 7 Plus in multiple colors" loading="lazy">
+            </div>
+            <h3>IPHONE 7+</h3>
+            <div class="color-options">
+              <label>Available Colors:</label>
+              <div class="color-range" role="listbox" aria-label="iPhone 7 Plus colors">
+                <button class="color-dot" style="background-color:#252525" aria-label="Black"></button>
+                <button class="color-dot" style="background-color:#D1D5D8" aria-label="Silver"></button>
+                <button class="color-dot" style="background-color:#F5C3C2" aria-label="Rose Gold"></button>
+                <button class="color-dot" style="background-color:#F5F5F5" aria-label="White"></button>
+              </div>
+            </div>
+            <p>Storage: 64GB, 128GB</p>
+          </article>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="swiper-slide">
+          <article class="productsss-card">
+            <div class="media">
+              <img src="images/iphone-se2-price-release-date-1504.jpg" alt="iPhone SE 2" loading="lazy">
+            </div>
+            <h3>IPHONE SE 2</h3>
+            <p>Storage: 16GB, 128GB, 256GB</p>
+          </article>
+        </div>
+
+        <!-- Product 3: 13 Pro Max -->
+        <div class="swiper-slide">
+          <article class="productsss-card">
+            <div class="media">
+              <img id="product-image-13" src="images/pngimg.com_-_iphone_13_PNG29.png" alt="iPhone 13 Pro Max" loading="lazy">
+            </div>
+            <h3>IPHONE 13 Pro Max</h3>
+            <p>LKR 159,900.00 – 224,900.00</p>
+            <div class="color-options">
+              <label>Available Colors:</label>
+              <div class="color-range">
+                <button class="color-dot" style="background-color:#F5F5DC" aria-label="White" onclick="changeImage('product-image-13','images/13pm-white.png')"></button>
+                <button class="color-dot" style="background-color:#0000FF" aria-label="Blue"  onclick="changeImage('product-image-13','images/13pm-blue.png')"></button>
+                <button class="color-dot" style="background-color:#fa95dc" aria-label="Pink"  onclick="changeImage('product-image-13','images/13pm-pink.png')"></button>
+                <button class="color-dot" style="background-color:#121212" aria-label="Black" onclick="changeImage('product-image-13','images/13pm-black.png')"></button>
+                <button class="color-dot" style="background-color:#125a16" aria-label="Green" onclick="changeImage('product-image-13','images/13pm-green.png')"></button>
+              </div>
+            </div>
+            <p>Storage: 128GB, 256GB, 512GB</p>
+          </article>
+        </div>
+
+        <!-- Product 4: 13 Pro -->
+        <div class="swiper-slide">
+          <article class="productsss-card">
+            <div class="media">
+              <img id="product-image-14" src="images/pngimg.com_-_iphone_12_PNG3.png" alt="iPhone 13 Pro" loading="lazy">
+            </div>
+            <h3>IPHONE 13 Pro</h3>
+            <p>LKR 159,900.00 – 224,900.00</p>
+            <div class="color-options">
+              <label>Available Colors:</label>
+              <div class="color-range">
+                <button class="color-dot" style="background-color:#F5F5DC" aria-label="White" onclick="changeImage('product-image-14','images/13pm-white.png')"></button>
+                <button class="color-dot" style="background-color:#0000FF" aria-label="Blue"  onclick="changeImage('product-image-14','images/13pm-blue.png')"></button>
+                <button class="color-dot" style="background-color:#fa95dc" aria-label="Pink"  onclick="changeImage('product-image-14','images/13pm-pink.png')"></button>
+                <button class="color-dot" style="background-color:#121212" aria-label="Black" onclick="changeImage('product-image-14','images/13pm-black.png')"></button>
+                <button class="color-dot" style="background-color:#125a16" aria-label="Green" onclick="changeImage('product-image-14','images/13pm-green.png')"></button>
+              </div>
+            </div>
+            <p>Storage: 128GB, 256GB, 512GB</p>
+          </article>
+        </div>
+
+        <!-- Product 5: 11 Pro Max -->
+        <div class="swiper-slide">
+          <article class="productsss-card">
+            <span class="hot-label">Hot Selling</span>
+            <div class="media">
+              <img id="product-image-19" src="images/pngimg.com_-_iphone_13_PNG29.png" alt="iPhone 11 Pro Max" loading="lazy">
+            </div>
+            <h3>IPHONE 11 Pro Max</h3>
+            <div class="color-options">
+              <label>Available Colors:</label>
+              <div class="color-range">
+                <button class="color-dot" style="background-color:#F5F5DC" aria-label="White" onclick="changeImage('product-image-19','images/11pm-white.jpg')"></button>
+                <button class="color-dot" style="background-color:#eb64cd" aria-label="Pink"  onclick="changeImage('product-image-19','images/11pm-pink.jpg')"></button>
+                <button class="color-dot" style="background-color:#616161" aria-label="Grey"  onclick="changeImage('product-image-19','images/11pm-grey.jpg')"></button>
+                <button class="color-dot" style="background-color:#1e4607" aria-label="Green" onclick="changeImage('product-image-19','images/11pm-green.jpg')"></button>
+              </div>
+            </div>
+            <p>Storage: 64GB, 128GB</p>
+          </article>
+        </div>
+
+        <!-- Product 6: 11 Pro -->
+        <div class="swiper-slide">
+          <article class="productsss-card">
+            <div class="media">
+              <img id="product-image-20" src="images/pngimg.com_-_iphone_13_PNG29.png" alt="iPhone 11 Pro" loading="lazy">
+            </div>
+            <h3>IPHONE 11 Pro</h3>
+            <div class="color-options">
+              <label>Available Colors:</label>
+              <div class="color-range">
+                <button class="color-dot" style="background-color:#F5F5DC" aria-label="White" onclick="changeImage('product-image-20','images/11pm-white.jpg')"></button>
+                <button class="color-dot" style="background-color:#eb64cd" aria-label="Pink"  onclick="changeImage('product-image-20','images/11pm-pink.jpg')"></button>
+                <button class="color-dot" style="background-color:#616161" aria-label="Grey"  onclick="changeImage('product-image-20','images/11pm-grey.jpg')"></button>
+                <button class="color-dot" style="background-color:#1e4607" aria-label="Green" onclick="changeImage('product-image-20','images/11pm-green.jpg')"></button>
+              </div>
+            </div>
+            <p>Storage: 64GB, 128GB</p>
+          </article>
+        </div>
+
+        <!-- Product 7: 11 -->
+        <div class="swiper-slide">
+          <article class="productsss-card">
+            <span class="hot-label">Hot Selling</span>
+            <div class="media">
+              <img id="product-image-21" src="images/Openjourney (1320967357836820512).png" alt="iPhone 11" loading="lazy">
+            </div>
+            <h3>IPHONE 11</h3>
+            <div class="color-options">
+              <label>Available Colors:</label>
+              <div class="color-range">
+                <button class="color-dot" style="background-color:#F5F5DC" aria-label="White" onclick="changeImage('product-image-21','images/12-white.jpg')"></button>
+                <button class="color-dot" style="background-color:#0000FF" aria-label="Blue"  onclick="changeImage('product-image-21','images/12-blue.jpg')"></button>
+                <button class="color-dot" style="background-color:#A285E0" aria-label="Purple" onclick="changeImage('product-image-21','images/12-purple.jpg')"></button>
+                <button class="color-dot" style="background-color:#FF0000" aria-label="Red"   onclick="changeImage('product-image-21','images/12-red.jpg')"></button>
+                <button class="color-dot" style="background-color:#47b650" aria-label="Green" onclick="changeImage('product-image-21','images/12-green.jpg')"></button>
+              </div>
+            </div>
+            <p>Storage: 64GB, 128GB</p>
+          </article>
+        </div>
+
+        <!-- Add more products by duplicating a .swiper-slide block -->
+      </div>
+
+      <!-- Navigation + Pagination -->
+      <div class="swiper-button-next" aria-label="Next"></div>
+      <div class="swiper-button-prev" aria-label="Previous"></div>
+      <div class="swiper-pagination" aria-label="Pagination"></div>
+    </div>
+    
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Image swapper used by color dots
+    function changeImage(id, src) {
+      var img = document.getElementById(id);
+      if (img) img.src = src;
+    }
+
+    // Init Swiper
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1200: { slidesPerView: 4 },
+        992:  { slidesPerView: 3 },
+        768:  { slidesPerView: 2 },
+        0:    { slidesPerView: 1 }   /* small screens */
+      },
+    });
+  </script>
+</body>
+</html>

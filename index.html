@@ -59,7 +59,8 @@
                 <button>iPhone<span class="dropdown-arrow">  ▼</span></button>
                 <div class="dropdown-content">
                     <a href="#iphone">Brand New</a> <!-- Link to the Brand New section within the same page -->
-                    <a href="#Preowned">Preowned</a>   <!-- Link to the Preowned section within the same page -->
+                   <a href="preowned.html#Preowned">Preowned</a>
+<!-- Link to the Preowned section within the same page -->
                 </div>
             <a href="#watch">iwatch</a>
             <a href="#Accesories">accessories</a>
@@ -170,12 +171,20 @@
 
 </div>
  
- <div class="video-container2">
+  
+<section class="preowned" id="preowned">
+        <h1 class="sectionsss-title">Preowned<span> iPhones</span></h1>
+        <div class="video-container2">
   <video autoplay muted loop playsinline>
     <source src="images/iphone1111.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-</div>
+    </div>
+    <!-- HTML -->
+<a href="preowned.html" class="btn">Shop Now</a>
+
+         
+    </section>
 
        
     
@@ -659,205 +668,7 @@
            
 </section>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Preowned iPhones</title>
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
-      background: #000;
-      color: #c4baba;
-    }
-
-    .sections-title {
-      font-size: 2.2rem;
-      text-align: center;
-      margin: 40px 0 20px;
-      font-weight: 600;
-    }
-    .sections-title span {
-      color: #c48f2ffa;
-    }
-
-    .swiper {
-      width: 90%;
-      max-width: 1400px;
-      margin: auto;
-      padding: 20px 0 50px;
-    }
-
-    .products1-card {
-      background: rgba(0,0,0,0.9);
-      border-radius: 18px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .products1-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
-
-    .products1-card img {
-      width: 100%;
-      max-height: 220px;
-      object-fit: contain;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
-
-    .products1-card h3 { font-size: 1.2rem; margin: 10px 0; }
-    .products1-card p { font-size: 0.95rem; color: #b6b1b1; margin: 6px 0; }
-
-    .color-options { margin: 10px 0; }
-    .color-options label { display: block; font-size: 0.9rem; color: #fff; margin-bottom: 6px; }
-    .color-range { display: flex; gap: 8px; justify-content: center; }
-    .color-dot {
-      width: 18px; height: 18px; border-radius: 50%;
-      border: 1px solid #ccc; cursor: pointer;
-    }
-
-    .swiper-button-next, .swiper-button-prev {
-      color: #ada4a4; font-weight: bold; transition: transform 0.2s;
-    }
-    .swiper-button-next:hover, .swiper-button-prev:hover { transform: scale(1.2); }
-
-    .swiper-pagination-bullet { background: #ccc; opacity: 1; }
-    .swiper-pagination-bullet-active { background: #111; }
-
-    @media (max-width: 768px) {
-      .sections1-title { font-size: 1.6rem; }
-      .products1-card h3 { font-size: 1rem; }
-      .productss1-card p { font-size: 0.85rem; }
-    }
-    @media (max-width: 576px) {
-      .sections-title { font-size: 1.4rem; }
-      .products1-card { padding: 12px; }
-      .products1-card img { max-height: 180px; }
-    }
-  </style>
-</head>
-<body>
-
-<section class="Preowned" id="Preowned">
-  <h1 class="sections-title">Preowned <span>iPhones</span></h1>
-
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-
-      <!-- Product 1 -->
-      <div class="swiper-slide">
-        <div class="products1-card">
-          <img src="images/Untitled design (4).png" alt="iPhone 7+">
-          <h3>IPHONE 7+</h3>
-          <div class="color-options">
-            <label>Available Colors:</label>
-            <div class="color-range">
-              <span class="color-dot" style="background-color:#252525;"></span>
-              <span class="color-dot" style="background-color:#D1D5D8;"></span>
-              <span class="color-dot" style="background-color:#F5C3C2;"></span>
-              <span class="color-dot" style="background-color:#F5F5F5;"></span>
-            </div>
-          </div>
-          <p>Storage: 64GB, 128GB</p>
-        </div>
-      </div>
-
-      <!-- Product 2 -->
-      <div class="swiper-slide">
-        <div class="products1-card">
-          <img src="images/iphone-se2-price-release-date-1504.jpg" alt="iPhone SE 2">
-          <h3>IPHONE SE 2</h3>
-          <p>Storage: 16GB, 128GB, 256GB</p>
-        </div>
-      </div>
-
-      <!-- Product 3 -->
-      <div class="swiper-slide">
-        <div class="products1-card">
-          <img id="product-image-13" src="images/pngimg.com_-_iphone_13_PNG29.png" alt="iPhone 13 Pro Max">
-          <h3>IPHONE 13 Pro Max</h3>
-          <p>LKR 159,900.00 - 224,900.00</p>
-          <div class="color-options">
-            <label>Available Colors:</label>
-            <div class="color-range">
-              <span class="color-dot" style="background-color:#F5F5DC;" onclick="changeImage('product-image-13','images/13pm-white.png')"></span>
-              <span class="color-dot" style="background-color:#0000FF;" onclick="changeImage('product-image-13','images/13pm-blue.png')"></span>
-              <span class="color-dot" style="background-color:#fa95dc;" onclick="changeImage('product-image-13','images/13pm-pink.png')"></span>
-              <span class="color-dot" style="background-color:#121212;" onclick="changeImage('product-image-13','images/13pm-black.png')"></span>
-              <span class="color-dot" style="background-color:#125a16;" onclick="changeImage('product-image-13','images/13pm-green.png')"></span>
-            </div>
-          </div>
-          <p>Storage: 128GB, 256GB, 512GB</p>
-        </div>
-      </div>
-
-      <!-- Product 4 -->
-      <div class="swiper-slide">
-        <div class="products1-card">
-          <img id="product-image-14" src="images/pngimg.com_-_iphone_12_PNG3.png" alt="iPhone 13 Pro">
-          <h3>IPHONE 13 Pro</h3>
-          <p>LKR 159,900.00 - 224,900.00</p>
-          <div class="color-options">
-            <label>Available Colors:</label>
-            <div class="color-range">
-              <span class="color-dot" style="background-color:#F5F5DC;" onclick="changeImage('product-image-14','images/13pm-white.png')"></span>
-              <span class="color-dot" style="background-color:#0000FF;" onclick="changeImage('product-image-14','images/13pm-blue.png')"></span>
-              <span class="color-dot" style="background-color:#fa95dc;" onclick="changeImage('product-image-14','images/13pm-pink.png')"></span>
-              <span class="color-dot" style="background-color:#121212;" onclick="changeImage('product-image-14','images/13pm-black.png')"></span>
-              <span class="color-dot" style="background-color:#125a16;" onclick="changeImage('product-image-14','images/13pm-green.png')"></span>
-            </div>
-          </div>
-          <p>Storage: 128GB, 256GB, 512GB</p>
-        </div>
-      </div>
-
-      <!-- Add more products as swiper-slide -->
-
-    </div>
-
-    <!-- Navigation -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-
-    <!-- Pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    loop: true,
-    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    pagination: { el: ".swiper-pagination", clickable: true },
-    breakpoints: {
-      1200: { slidesPerView: 4 },
-      992: { slidesPerView: 3 },
-      768: { slidesPerView: 2 },
-      576: { slidesPerView: 1 }
-    }
-  });
-
-  function changeImage(id, src) {
-    document.getElementById(id).src = src;
-  }
-</script>
-
-</body>
-</html>
+ 
 
 
     <!--i watch collection-->
